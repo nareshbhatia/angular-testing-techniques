@@ -4,6 +4,9 @@ import { Order, Side } from '../domain/order';
 import { OrderViewComponent } from './order-view.component';
 import { OrderProgressBarComponent } from '../order-progress-bar/order-progress-bar.component';
 
+const o100 = new Order('o100', Side.BUY, 'GOOG', 10000, 6000, 4000);
+const o200 = new Order('o200', Side.SELL, 'HAL', 5000, 4500, 4000);
+
 describe('OrderViewComponent', () => {
     let component: OrderViewComponent;
     let fixture: ComponentFixture<OrderViewComponent>;
@@ -17,14 +20,7 @@ describe('OrderViewComponent', () => {
     beforeEach(() => {
         fixture = TestBed.createComponent(OrderViewComponent);
         component = fixture.componentInstance;
-        component.order = new Order(
-            'o100',
-            Side.BUY,
-            'GOOG',
-            10000,
-            6000,
-            4000
-        );
+        component.order = o100;
         fixture.detectChanges();
     });
 
