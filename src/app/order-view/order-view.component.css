@@ -1,0 +1,70 @@
+.container {
+    width: 200px;
+    padding: 16px;
+}
+
+.container--buy {
+    background-color: #2c4d3d;
+}
+
+.container--sell {
+    background-color: #4d3e2e;
+}
+
+.title {
+    margin: 0 0 8px 0;
+    font-size: 21px;
+    font-weight: 400;
+}
+
+.title--buy {
+    color: #00b25f;
+}
+
+.title--sell {
+    color: #e57a00;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.label-value {
+    display: flex;
+    flex-direction: column;
+}
+
+.label-value label {
+    font-size: 12px;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.label-value span {
+    margin-top: 2px;
+    font-size: 18px;
+    font-weight: 400;
+    color: #fff;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.subheading {
+    margin: 24px 0 8px 0;
+    font-size: 16px;
+    font-weight: 300;
+    color: #fff;
+}
+
+.body {
+    font-weight: 500;
+    color: #fff;
+}
+
+.progress-container {
+    height: 16px;
+}

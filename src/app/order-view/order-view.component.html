@@ -1,0 +1,21 @@
+<div class="container {{order.side === 'BUY' ? 'container--buy' : 'container--sell'}}">
+    <h1 class="title {{order.side === 'BUY' ? 'title--buy' : 'title--sell'}}">
+        {{order.side}}
+    </h1>
+
+    <div class="flex-row">
+        <div class="label-value">
+            <label>Symbol</label>
+            <span>{{order.symbol}}</span>
+        </div>
+        <div class="label-value">
+            <label class="text-right">Quantity</label>
+            <span class="text-right">{{order.quantity}}</span>
+        </div>
+    </div>
+
+    <h2 class="subheading">Order Progress</h2>
+    <div class="progress-container">
+        <app-order-progress-bar [order]="order"></app-order-progress-bar>
+    </div>
+</div>

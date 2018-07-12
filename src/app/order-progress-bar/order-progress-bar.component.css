@@ -1,0 +1,21 @@
+:host {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+}
+
+.buy {
+    background-color: #f2d200;
+}
+
+.sell {
+    background-color: #f2d200;
+}
+
+.notDone {
+    background-color: #808080;
+}
+
+.uncommitted {
+    background-color: #000000;
+}

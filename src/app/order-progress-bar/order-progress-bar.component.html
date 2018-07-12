@@ -1,0 +1,12 @@
+<span
+    class="{{order.side === 'BUY' ? 'buy' : 'sell'}}"
+    [style.width.%]="order.status.pctDone * 100"
+></span>
+<span
+    class="notDone"
+    [style.width.%]="order.status.pctNotDone * 100"
+></span>
+<span
+    class="uncommitted"
+    [style.width.%]="order.status.pctUncommitted * 100"
+></span>

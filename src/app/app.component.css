@@ -1,0 +1,6 @@
+.orders-container {
+    width: 450px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+}

@@ -1,0 +1,21 @@
+html {
+    height: 100%;
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    height: 100%;
+    margin: 0;
+    font-family: Roboto, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+
+// Helps fonts on OSX look more consistent with other systems
+-webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+// Use momentum-based scrolling on iOS devices
+-webkit-overflow-scrolling: touch;
+}
