@@ -7,21 +7,45 @@ import { Order, Side } from '../app/domain/order';
 import { OrderViewComponent } from '../app/order-view/order-view.component';
 import { OrderProgressBarComponent } from '../app/order-progress-bar/order-progress-bar.component';
 
+const o100 = new Order('o100', Side.BUY, 'GOOG', 10000, 0, 0);
+const o200 = new Order('o200', Side.BUY, 'GOOG', 10000, 10000, 0);
+const o300 = new Order('o300', Side.BUY, 'GOOG', 10000, 10000, 10000);
+const o400 = new Order('o400', Side.BUY, 'GOOG', 10000, 5000, 2500);
+const o500 = new Order('o500', Side.SELL, 'GOOG', 10000, 5000, 2500);
+
 storiesOf('Order View', module)
     .addDecorator(
         moduleMetadata({
             declarations: [OrderProgressBarComponent]
         })
     )
-    .add('buy order', () => ({
+    .add('uncommitted order', () => ({
         component: OrderViewComponent,
         props: {
-            order: new Order('o100', Side.BUY, 'GOOG', 10000, 6000, 4000)
+            order: o100
         }
     }))
-    .add('sell order', () => ({
+    .add('fully committed order', () => ({
         component: OrderViewComponent,
         props: {
-            order: new Order('o200', Side.SELL, 'HAL', 5000, 4500, 4000)
+            order: o200
+        }
+    }))
+    .add('fully done order', () => ({
+        component: OrderViewComponent,
+        props: {
+            order: o300
+        }
+    }))
+    .add('partially done buy order', () => ({
+        component: OrderViewComponent,
+        props: {
+            order: o400
+        }
+    }))
+    .add('partially done sell order', () => ({
+        component: OrderViewComponent,
+        props: {
+            order: o500
         }
     }));
