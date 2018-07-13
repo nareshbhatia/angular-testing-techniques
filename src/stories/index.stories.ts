@@ -10,8 +10,8 @@ import { OrderProgressBarComponent } from '../app/order-progress-bar/order-progr
 const o100 = new Order('o100', Side.BUY, 'GOOG', 10000, 0, 0);
 const o200 = new Order('o200', Side.BUY, 'GOOG', 10000, 10000, 0);
 const o300 = new Order('o300', Side.BUY, 'GOOG', 10000, 10000, 10000);
-const o400 = new Order('o400', Side.BUY, 'GOOG', 10000, 5000, 2500);
-const o500 = new Order('o500', Side.SELL, 'GOOG', 10000, 5000, 2500);
+const o400 = new Order('o400', Side.BUY, 'GOOG', 10000, 5000, 3000);
+const o500 = new Order('o500', Side.SELL, 'GOOG', 10000, 5000, 3000);
 
 storiesOf('Order View', module)
     .addDecorator(

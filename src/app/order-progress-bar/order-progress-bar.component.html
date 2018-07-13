@@ -1,9 +1,9 @@
 <span
-    class="{{order.side === 'BUY' ? 'buy' : 'sell'}}"
+    class="done"
     [style.width.%]="order.status.pctDone * 100"
 ></span>
 <span
-    class="notDone"
+    class="not-done"
     [style.width.%]="order.status.pctNotDone * 100"
 ></span>
 <span

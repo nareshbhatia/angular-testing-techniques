@@ -4,15 +4,11 @@
     height: 100%;
 }
 
-.buy {
+.done {
     background-color: #f2d200;
 }
 
-.sell {
-    background-color: #f2d200;
-}
-
-.notDone {
+.not-done {
     background-color: #808080;
 }
 
