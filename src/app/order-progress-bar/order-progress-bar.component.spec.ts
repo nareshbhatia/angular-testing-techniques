@@ -28,7 +28,7 @@ function getBarPercents(elm: HTMLElement) {
         done: getWidth(elm.querySelector('.done')) / elmWidth,
         notDone: getWidth(elm.querySelector('.not-done')) / elmWidth,
         uncommitted: getWidth(elm.querySelector('.uncommitted')) / elmWidth
-    }
+    };
 }
 
 describe('OrderProgressBarComponent', () => {
@@ -93,7 +93,7 @@ describe('OrderProgressBarComponent', () => {
         fixture.detectChanges();
         const pcts = getBarPercents(fixture.nativeElement);
         expect(pcts.done).toBeCloseTo(0.2333, 4);
-        expect(pcts.notDone).toBeCloseTo(0.1000, 4);
+        expect(pcts.notDone).toBeCloseTo(0.1, 4);
         expect(pcts.uncommitted).toBeCloseTo(0.6667, 4);
     });
 });
