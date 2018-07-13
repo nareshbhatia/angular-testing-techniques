@@ -5,7 +5,18 @@ export class AppPage {
         return browser.get('/');
     }
 
-    getAllOrders() {
+    getOrders() {
         return element.all(by.css('app-order-view'));
+    }
+
+    getOrderCount() {
+        return this.getOrders().count();
+    }
+
+    getOrderSymbol(index) {
+        return this.getOrders()
+            .get(index)
+            .element(by.css('.js-symbol'))
+            .getText();
     }
 }

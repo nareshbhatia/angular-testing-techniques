@@ -36,8 +36,8 @@ describe('OrderViewComponent', () => {
         const elm = fixture.nativeElement;
         const container = elm.querySelector('.container');
         const title = elm.querySelector('.title');
-        const symbol = elm.querySelector('.label-value:nth-child(1) span');
-        const quantity = elm.querySelector('.label-value:nth-child(2) span');
+        const symbol = elm.querySelector('.js-symbol');
+        const quantity = elm.querySelector('.js-quantity');
 
         // Tile background should be green
         expect(getComputedStyle(container).backgroundColor).toBe(
@@ -60,8 +60,8 @@ describe('OrderViewComponent', () => {
         const elm = fixture.nativeElement;
         const container = elm.querySelector('.container');
         const title = elm.querySelector('.title');
-        const symbol = elm.querySelector('.label-value:nth-child(1) span');
-        const quantity = elm.querySelector('.label-value:nth-child(2) span');
+        const symbol = elm.querySelector('.js-symbol');
+        const quantity = elm.querySelector('.js-quantity');
 
         // Tile background should be brown
         expect(getComputedStyle(container).backgroundColor).toBe(
