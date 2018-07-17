@@ -1,6 +1,6 @@
 {
-  "name": "angular-storybook-test",
-  "description": "An example of testing an Angular app using Storybook",
+  "name": "angular-testing-techniques",
+  "description": "An example of testing Angular apps",
   "version": "1.0.0",
   "scripts": {
     "ng": "ng",
