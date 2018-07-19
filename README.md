@@ -6,8 +6,9 @@ This is a simple example to demonstrate various techniques to test Angular apps,
 1. Visualizing different states of a component using Storybook
 2. Unit testing a component
 3. Integration testing (a.k.a. end-to-end testing) the entire app
+4. Screenshot testing (a.k.a. visual regression testing) the entire app
 
-A screen shot of the final app is shown below. It contains a single page with two tiles representing a buy order and a sell order in the stock market. Each tile is created using an Angular component called `OrderViewComponent`.
+A screenshot of the final app is shown below. It contains a single page with two tiles representing a buy order and a sell order in the stock market. Each tile is created using an Angular component called `OrderViewComponent`.
 
 ![Screen Shot](assets/screen-shot.png)
 
@@ -23,8 +24,8 @@ $ ng serve
 Now point your browser to http://localhost:4200/.
 
 
-Visual testing
---------------
+Visualize component states
+--------------------------
 Allows you to visualize different states of your UI components and develop them interactively.
 
 #### Tools
@@ -73,3 +74,25 @@ Tests an entire app with multiple components, pages and navigation, while fully 
 #### Running the tests
 
     ng e2e
+
+Screenshot (visual regression) testing
+--------------------------------------
+Compares current images of an app with previous images, and reports the differences
+
+#### Tools
+- [Jest](https://jestjs.io/): Testing framework
+- [jest-image-snapshot](https://github.com/americanexpress/jest-image-snapshot): Jest matcher for image comparisons
+- [Puppeteer](https://pptr.dev/): Headless Chrome Node API used for taking screenshots
+
+#### Tests
+- [home-page.test.js](snapshot-testing/home-page.test.js): Takes a screenshot of the home page and compares it with its previously stored image. If the images don't match, the test fails and the difference in the images is saved under `snapshot-testing/__image_snapshots__/__diff_output__`. Try it by changing some code. For example, in [order-view.component.css](src/app/order-view/order-view.component.css), change the color of `.title--buy` to yellow:
+
+```css
+.title--buy {
+    color: #f2d200;
+}
+```
+
+#### Running the tests
+
+    yarn screenshot-test
